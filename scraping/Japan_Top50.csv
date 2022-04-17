@@ -1,4 +1,4 @@
-,name,album,artist,release_date,length,popularity,key,mode,danceability,acousticness,energy,instrumentalness,liveness,loudness,speechiness,tempo,time_signature,valence
+﻿,name,album,artist,release_date,length,popularity,key,mode,danceability,acousticness,energy,instrumentalness,liveness,loudness,speechiness,tempo,time_signature,valence
 0,W / X / Y,Memories,Tani Yuuki,2021-12-08,278118,74,2,1,0.628,0.159,0.775,0.0,0.33,-4.479,0.0535,106.382,3,0.674
 1,ベテルギウス,壱,Yuuri,2022-01-12,230600,74,5,1,0.367,0.222,0.671,0.0,0.494,-4.604,0.0478,179.833,4,0.691
 2,なんでもないよ、,ハッピーエンドへの期待は,Macaroni Empitsu,2022-01-12,219252,73,4,1,0.598,0.245,0.511,0.0,0.0732,-6.015,0.0423,171.845,4,0.652
