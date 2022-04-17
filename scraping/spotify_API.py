@@ -69,4 +69,4 @@ for track_id in track_ids:
 df = pd.DataFrame(tracks, columns = ['name', 'album', 'artist', 'release_date', 'length', 'popularity', 'key', 'mode', 'danceability', 'acousticness', 'energy', 'instrumentalness', 'liveness', 'loudness', 'speechiness', 'tempo', 'time_signature', 'valence'])
 df.head()
 
-df.to_csv('spotify_music_data.csv', sep = ',')
+df.to_csv('Japan_Top50.csv', encoding='utf_8_sig')
