@@ -29,7 +29,7 @@ def getTrackIDs(playlist_ids):
                     track_ids.append(track['id'])
     return track_ids
 
-playlist_ids = ["2ucIj3Mln9njQoXCEwDL84"]  # SpotifyのプレイリストのIDを入力
+playlist_ids = ["37i9dQZEVXbNG2KDcFcKOF"]  # SpotifyのプレイリストのIDを入力
 track_ids = getTrackIDs(playlist_ids)
 # print(len(track_ids))
 # print(track_ids)
@@ -79,5 +79,5 @@ tracks_dict = {i+1: dict(zip(items,tracks[i])) for i in range(len(tracks))}
 # print(tracks_dict) これは試験用
 
 #ファイルごとに名前を変える
-with open("Japan_Top50.json","w") as f:
+with open("Global_Top50.json","w") as f:
     json.dump(tracks_dict,f,ensure_ascii=False, indent=4)
