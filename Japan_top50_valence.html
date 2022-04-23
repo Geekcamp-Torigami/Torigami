@@ -8,94 +8,98 @@
     <script type="text/javascript" src="./d3.js"></script>
   </head>
   <body>
-    <div id="app">
+    <!-- <div id="app">
       <div v-for="(music, index) in music_data.name" :key="index">
         {{music}}
       </div>
-    </div>
+    </div> -->
   </body>
-  <script src="https://unpkg.com/vue@3.2.20"></script>
+  <!-- <script src="https://unpkg.com/vue@3.2.20"></script> -->
   <script>
-    Vue.createApp({
-      data() {
-        return {
-          music_data: [],
-        };
-      },
-      created: function () {
-        this.music_data.sort(function (a, b) {
-          return a.valence > b.valence ? -1 : 1;
-        });
-      },
-    }).mount("#app");
+    // Vue.createApp({
+    //   data() {
+    //     return {
+    //       music_data: [],
+    //     };
+    //   },
+    //   created: function () {
+    //     this.music_data.sort(function (a, b) {
+    //       return a.valence > b.valence ? -1 : 1;
+    //     });
+    //   },
+    // }).mount("#app");
 
     var dataset;
-        d3.csv("../scraping/Japan_BEST2021_10.csv").then(function(data){
-            //console.log(dataset);
-            dataset = data;
+    d3.csv("../scraping/Japan_BEST2021_10.csv").then(function (data) {
+      //console.log(dataset);
+      dataset = data;
 
-            var svg = d3.select("body").append("svg")
-                        .attr("width",3840)
-                        .attr("height",2400);
-            
-            var circle1 = svg.selectAll("circle1")
-                            .data(data)
-                            .enter()
-            
-            circle1.append("image")
-                    .attr("x",function(d,i){
-                        return 1920+800*Math.cos(2*Math.PI*i/10)
-                    })
-                    .attr("y",function(d,i){
-                        return 1200+800*Math.sin(2*Math.PI*i/10)
-                    })
-                    .attr("width",function(d){
-                        return d.popularity*2
-                    })
-                    .attr("height",function(d){
-                        return d.popularity*2
-                    })
-                    .attr("xlink:href",function(d,i){
-                        return d.image
-                    })
-                    .on("mouseover",function(d){
-                        d3.select(this).attr("width",function(d){
-                                            return d.popularity*3
-                                        })   
-                                        .attr("height",function(d){
-                                            return d.popularity*3
-                                        })
-                    })
-                    .on("mouseout",function(d){
-                        d3.select(this).attr("width",function(d){
-                                            return d.popularity*2
-                                        })
-                                        .attr("height",function(d){
-                                            return d.popularity*2
-                                        })
-                    })
-                    /*.append("text")
+      var svg = d3
+        .select("body")
+        .append("svg")
+        .attr("width", 3840)
+        .attr("height", 2400);
+
+      var circle1 = svg.selectAll("circle1").data(data).enter();
+
+      circle1
+        .append("image")
+        .attr("x", function (d, i) {
+          return 1920 + 800 * Math.cos((2 * Math.PI * i) / 10);
+        })
+        .attr("y", function (d, i) {
+          return 1200 + 800 * Math.sin((2 * Math.PI * i) / 10);
+        })
+        .attr("width", function (d) {
+          return d.popularity * 2;
+        })
+        .attr("height", function (d) {
+          return d.popularity * 2;
+        })
+        .attr("xlink:href", function (d, i) {
+          return d.image;
+        })
+        .on("mouseover", function (d) {
+          d3.select(this)
+            .attr("width", function (d) {
+              return d.popularity * 3;
+            })
+            .attr("height", function (d) {
+              return d.popularity * 3;
+            });
+        })
+        .on("mouseout", function (d) {
+          d3.select(this)
+            .attr("width", function (d) {
+              return d.popularity * 2;
+            })
+            .attr("height", function (d) {
+              return d.popularity * 2;
+            });
+        });
+      /*.append("text")
                     .attr({"text-anchor":"bottom","fill":"green"})
                     .style({"font-size":14})
                     .text(function(d){return d.name});*/
-            
-            var circle1_text = svg.selectAll("circle1_text")
-                                    .data(data)
-                                    .enter()
-                                    .append("text")
-                                    .text(function(d){
-                                        return d.name
-                                    })
-                                    .attr("x",function(d,i){
-                                        return 1920+800*Math.cos(2*Math.PI*i/10)
-                                    })
-                                    .attr("y",function(d,i){
-                                        return 1200+800*Math.sin(2*Math.PI*i/10)
-                                    })
-                                    .attr("font-size",20)
-                                   
-            data2 = [10]
-            /*var circle2 = svg.selectAll("circle2")
+
+      var circle1_text = svg
+        .selectAll("circle1_text")
+        .data(data)
+        .enter()
+        .append("text")
+        .text(function (d) {
+          return d.name;
+        })
+        .attr("x", function (d, i) {
+          return 1920 + 800 * Math.cos((2 * Math.PI * i) / 10);
+        })
+        .attr("y", function (d, i) {
+          return 1200 + 800 * Math.sin((2 * Math.PI * i) / 10);
+        })
+        .attr("font-size", 20);
+
+      data2 = [10];
+      /*var circle2 = svg.selectAll("circle2")
                             .data(data2)
                             .enter()
                             .append("circle")
@@ -134,6 +138,6 @@
                     circle2.attr("fill","black")
                             .attr("stroke","rgb(30,215,96)")
                 })*/
-        })
+    });
   </script>
 </html>
