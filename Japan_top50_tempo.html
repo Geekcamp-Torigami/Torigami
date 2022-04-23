@@ -16,23 +16,38 @@
   </body>
   <!-- <script src="https://unpkg.com/vue@3.2.20"></script> -->
   <script>
-    // Vue.createApp({
-    //   data() {
-    //     return {
-    //       music_data: [],
-    //     };
-    //   },
-    //   created: function () {
-    //     this.music_data.sort(function (a, b) {
-    //       return a.tempo > b.tempo ? -1 : 1;
-    //     });
-    //   },
-    // }).mount("#app");
+    /*Vue.createApp({
+      data() {
+        return {
+          music_data: [],
+        };
+      },
+      created: function () {
+        this.music_data.sort(function (a, b) {
+          return a.tempo > b.tempo ? -1 : 1;
+        });
+      },
+    }).mount("#app");*/
 
     var dataset;
-    d3.csv("../scraping/Japan_BEST2021_10.csv").then(function (data) {
+    d3.csv("../scraping/Japan_Top50.csv").then(function (data) {
       //console.log(dataset);
       dataset = data;
+
+      console.log(data);
+
+      data.sort(function (a, b) {
+        if (Number(a.tempo) > Number(b.tempo)) {
+          return -1;
+        } else {
+          return 1;
+        }
+      });
+
+      console.log(data);
+
+      var t = data.slice(0, 10);
+      console.log(t);
 
       var svg = d3
         .select("body")
@@ -40,7 +55,7 @@
         .attr("width", 3840)
         .attr("height", 2400);
 
-      var circle1 = svg.selectAll("circle1").data(data).enter();
+      var circle1 = svg.selectAll("circle1").data(t).enter();
 
       circle1
         .append("image")
@@ -84,7 +99,7 @@
 
       var circle1_text = svg
         .selectAll("circle1_text")
-        .data(data)
+        .data(t)
         .enter()
         .append("text")
         .text(function (d) {
