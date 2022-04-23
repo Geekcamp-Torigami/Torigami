@@ -7,107 +7,116 @@
     <title>Document</title>
     <script type="text/javascript" src="./d3.js"></script>
   </head>
-  <body>
-    <div id="app">
-      <div v-for="(music, index) in music_data.name" :key="index">
-        {{music}}
-      </div>
-    </div>
-  </body>
-  <script src="https://unpkg.com/vue@3.2.20"></script>
+  <body></body>
+  <style scoped>
+    body {
+      background: linear-gradient(
+          45deg,
+          hsla(352, 96%, 45%, 1) 0%,
+          hsla(352, 96%, 45%, 0) 70%
+        ),
+        linear-gradient(
+          135deg,
+          hsla(253, 95%, 42%, 1) 10%,
+          hsla(253, 95%, 42%, 0) 80%
+        ),
+        linear-gradient(
+          225deg,
+          hsla(179, 91%, 45%, 1) 10%,
+          hsla(179, 91%, 45%, 0) 80%
+        ),
+        linear-gradient(
+          315deg,
+          hsla(119, 96%, 49%, 1) 100%,
+          hsla(119, 96%, 49%, 0) 70%
+        );
+    }
+  </style>
+
   <script>
-    /*Vue.createApp({
-      data() {
-        return {
-          music_data: [],
-        };
-      },
-      created: function () {
-        this.music_data.sort(function (a, b) {
-          return a.acousticness > b.acoustiness ? -1 : 1;
-        });
-      },
-    }).mount("#app");*/
-
     var dataset;
-        d3.csv("../scraping/Japan_Top50.csv").then(function(data){
-            console.log(data)
+    d3.csv("../scraping/Japan_Top50.csv").then(function (data) {
+      console.log(data);
 
-            data.sort(function(a,b){
-              if (a.acousticness > b.acousticness){
-                return -1;
-              } else {
-                return 1;
-              }
+      data.sort(function (a, b) {
+        if (a.acousticness > b.acousticness) {
+          return -1;
+        } else {
+          return 1;
+        }
+      });
+
+      console.log(data);
+
+      var a = data.slice(0, 10);
+      console.log(a);
+
+      var svg = d3
+        .select("body")
+        .append("svg")
+        .attr("width", 3840)
+        .attr("height", 2400);
+
+      var circle1 = svg.selectAll("circle1").data(a).enter();
+
+      circle1
+        .append("image")
+        .attr("x", function (d, i) {
+          return 1920 + 800 * Math.cos((2 * Math.PI * i) / 10);
+        })
+        .attr("y", function (d, i) {
+          return 1200 + 800 * Math.sin((2 * Math.PI * i) / 10);
+        })
+        .attr("width", function (d) {
+          return d.popularity * 2;
+        })
+        .attr("height", function (d) {
+          return d.popularity * 2;
+        })
+        .attr("xlink:href", function (d, i) {
+          return d.image;
+        })
+        .on("mouseover", function (d) {
+          d3.select(this)
+            .attr("width", function (d) {
+              return d.popularity * 3;
             })
-
-            console.log(data);
-
-            var a = data.slice(0,10);
-            console.log(a);
-
-            var svg = d3.select("body").append("svg")
-                        .attr("width",3840)
-                        .attr("height",2400);
-            
-            var circle1 = svg.selectAll("circle1")
-                            .data(a)
-                            .enter()
-            
-            circle1.append("image")
-                    .attr("x",function(d,i){
-                        return 1920+800*Math.cos(2*Math.PI*i/10)
-                    })
-                    .attr("y",function(d,i){
-                        return 1200+800*Math.sin(2*Math.PI*i/10)
-                    })
-                    .attr("width",function(d){
-                        return d.popularity*2
-                    })
-                    .attr("height",function(d){
-                        return d.popularity*2
-                    })
-                    .attr("xlink:href",function(d,i){
-                        return d.image
-                    })
-                    .on("mouseover",function(d){
-                        d3.select(this).attr("width",function(d){
-                                            return d.popularity*3
-                                        })   
-                                        .attr("height",function(d){
-                                            return d.popularity*3
-                                        })
-                    })
-                    .on("mouseout",function(d){
-                        d3.select(this).attr("width",function(d){
-                                            return d.popularity*2
-                                        })
-                                        .attr("height",function(d){
-                                            return d.popularity*2
-                                        })
-                    })
-                    /*.append("text")
+            .attr("height", function (d) {
+              return d.popularity * 3;
+            });
+        })
+        .on("mouseout", function (d) {
+          d3.select(this)
+            .attr("width", function (d) {
+              return d.popularity * 2;
+            })
+            .attr("height", function (d) {
+              return d.popularity * 2;
+            });
+        });
+      /*.append("text")
                     .attr({"text-anchor":"bottom","fill":"green"})
                     .style({"font-size":14})
                     .text(function(d){return d.name});*/
-            
-            var circle1_text = svg.selectAll("circle1_text")
-                                    .data(a)
-                                    .enter()
-                                    .append("text")
-                                    .text(function(d){
-                                        return d.name
-                                    })
-                                    .attr("x",function(d,i){
-                                        return 1920+800*Math.cos(2*Math.PI*i/10)
-                                    })
-                                    .attr("y",function(d,i){
-                                        return 1200+800*Math.sin(2*Math.PI*i/10)
-                                    })
-                                    .attr("font-size",20)
-                                   
-            data2 = [10]
-            /*var circle2 = svg.selectAll("circle2")
+
+      var circle1_text = svg
+        .selectAll("circle1_text")
+        .data(a)
+        .enter()
+        .append("text")
+        .text(function (d) {
+          return d.name;
+        })
+        .attr("x", function (d, i) {
+          return 1920 + 800 * Math.cos((2 * Math.PI * i) / 10);
+        })
+        .attr("y", function (d, i) {
+          return 1200 + 800 * Math.sin((2 * Math.PI * i) / 10);
+        })
+        .attr("font-size", 20);
+
+      data2 = [10];
+      /*var circle2 = svg.selectAll("circle2")
                             .data(data2)
                             .enter()
                             .append("circle")
@@ -146,6 +155,6 @@
                     circle2.attr("fill","black")
                             .attr("stroke","rgb(30,215,96)")
                 })*/
-        })
+    });
   </script>
 </html>

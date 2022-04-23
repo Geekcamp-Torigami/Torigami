@@ -8,6 +8,7 @@
     <script type="text/javascript" src="./d3.js"></script>
   </head>
   <body></body>
+
   <style scoped>
     body {
       background: linear-gradient(
@@ -32,24 +33,23 @@
         );
     }
   </style>
+
   <script>
     var dataset;
     d3.csv("../scraping/Global_Top50.csv").then(function (data) {
       //console.log(dataset);
-      console.log(data);
+      dataset = data;
 
       data.sort(function (a, b) {
-        if (a.valence > b.valence) {
+        if (Number(a.popularity) > Number(b.popularity)) {
           return -1;
         } else {
           return 1;
         }
       });
 
-      console.log(data);
-
-      var v = data.slice(0, 10);
-      console.log(v);
+      var p = data.slice(0, 10);
+      console.log(p);
 
       var svg = d3
         .select("body")
@@ -57,7 +57,7 @@
         .attr("width", 3840)
         .attr("height", 2400);
 
-      var circle1 = svg.selectAll("circle1").data(v).enter();
+      var circle1 = svg.selectAll("circle1").data(p).enter();
 
       circle1
         .append("image")
@@ -101,7 +101,7 @@
 
       var circle1_text = svg
         .selectAll("circle1_text")
-        .data(v)
+        .data(p)
         .enter()
         .append("text")
         .text(function (d) {
