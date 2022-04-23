@@ -40,6 +40,9 @@
                         return d.image;
                     })
                     .attr("opacity",0)
+                    .attr("id",function(d){
+                        return d.name
+                    })
                     .on("mouseover",function(d){
                         d3.select(this).transition().duration(100)
                                         .attr("height",200)
@@ -49,6 +52,21 @@
                         d3.select(this).transition().duration(100)
                                         .attr("height",100)
                                         .attr("width",100)
+                    })
+                    .on("click",function(d){
+                        if (d3.select(this).attr("id") == "acousticness"){
+                            window.location.href = "Japan_top50_acousticness.html";
+                        } else if (d3.select(this).attr("id") == "danceability"){
+                            window.location.href = "Japan_top50_danceability.html";
+                        } else if (d3.select(this).attr("id") == "energy"){
+                            window.location.href = "Japan_top50_energy.html";
+                        } else if (d3.select(this).attr("id") == "popularity"){
+                            window.location.href = "Japan_top50_popularity.html";
+                        } else if (d3.select(this).attr("id") == "valence"){
+                            window.location.href = "Japan_top50_valence.html";
+                        } else {
+                            window.location.href = "Japan_top50_tempo.html";
+                        }
                     })
             
             data2 = [10]
