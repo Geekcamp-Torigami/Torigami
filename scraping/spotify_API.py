@@ -40,6 +40,7 @@ def getTrackFeatures(id):
 
     name = meta['name']
     album = meta['album']['name']
+    image = meta["album"]["images"][0]["url"]
     artist = meta['album']['artists'][0]['name']
     release_date = meta['album']['release_date']
     length = meta['duration_ms']
@@ -57,7 +58,7 @@ def getTrackFeatures(id):
     time_signature = features[0]['time_signature']
     valence = features[0]['valence']
 
-    track = [name, album, artist, release_date, length, popularity, key, mode, danceability, acousticness, energy, instrumentalness, liveness, loudness, speechiness, tempo, time_signature, valence]
+    track = [name, album, artist, image, release_date, length, popularity, key, mode, danceability, acousticness, energy, instrumentalness, liveness, loudness, speechiness, tempo, time_signature, valence]
     return track
 
 tracks = []
@@ -74,7 +75,7 @@ for track_id in track_ids:
 
 
 #jsonファイルを作るなら下の部分を使う
-items = ['name', 'album', 'artist', 'release_date', 'length', 'popularity', 'key', 'mode', 'danceability', 'acousticness', 'energy', 'instrumentalness', 'liveness', 'loudness', 'speechiness', 'tempo', 'time_signature', 'valence']
+items = ['name', 'album', 'artist', 'image', 'release_date', 'length', 'popularity', 'key', 'mode', 'danceability', 'acousticness', 'energy', 'instrumentalness', 'liveness', 'loudness', 'speechiness', 'tempo', 'time_signature', 'valence']
 tracks_dict = {i+1: dict(zip(items,tracks[i])) for i in range(len(tracks))}
 # print(tracks_dict) これは試験用
 
