@@ -41,30 +41,6 @@
                                             return d.value
                                         })
                     })
-
-            /*circle1.attr("cx",function(d,i){
-                        return 1000+350*Math.cos(2*Math.PI*i/10)})
-                    .attr("cy",function(d,i){
-                        return 500+350*Math.sin(2*Math.PI*i/10)})
-                    .attr("r",function(d) {return d.value})
-                    .attr("fill","black")
-                    .attr("stroke","black")
-                    .on("mouseover",function(d){
-                        d3.select(this).attr("fill","green")
-                                        .attr("stroke","green")
-                                        .transition().duration(100)
-                                        .attr("r",function(d){
-                                            return d.value*1.5
-                                        });
-                    })
-                    .on("mouseout",function(d){
-                        d3.select(this).attr("fill","black")
-                                        .attr("strole","black")
-                                        .transition().duration(100)
-                                        .attr("r",function(d){
-                                            return d.value
-                                        })
-                    })*/
             
             data2 = [10]
             var circle2 = svg.selectAll("circle2")
@@ -76,15 +52,7 @@
                             .attr("r",200)
                             .attr("fill","black")
                             .attr("stroke","rgb(30,215,96)")
-                            /*on("mouseover",function(){
-                                circle2.attr("fill","orange")
-                                                .attr("stroke","rgb(30,215,96)")
-                            })
-                            .on("mouseout",function(){
-                                d3.select(this).attr("fill","black")
-                                                .attr("stroke","rgb(30,215,96)")
-                            })*/
-            
+                           
             var defs = svg.append('defs');
             var circles = defs
                             .append('circle')
