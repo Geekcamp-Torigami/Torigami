@@ -1,0 +1,7 @@
+name,image
+energy, ./images/energy.png
+danceability, ./images/danceability.png
+tempo, ./images/tempo.png
+acousticness, ./images/acousticness.png
+valence, ./images/valence.png
+popularity, ./images/popularity.png
