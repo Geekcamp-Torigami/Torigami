@@ -16,7 +16,7 @@
   </body>
   <script src="https://unpkg.com/vue@3.2.20"></script>
   <script>
-    Vue.createApp({
+    /*Vue.createApp({
       data() {
         return {
           music_data: [],
@@ -27,19 +27,32 @@
           return a.valence > b.valence ? -1 : 1;
         });
       },
-    }).mount("#app");
+    }).mount("#app");*/
 
     var dataset;
-        d3.csv("../scraping/Japan_BEST2021_10.csv").then(function(data){
+        d3.csv("../scraping/Japan_Top50.csv").then(function(data){
             //console.log(dataset);
-            dataset = data;
+            console.log(data)
+
+            data.sort(function(a,b){
+              if (a.valence > b.valence){
+                return -1;
+              } else {
+                return 1;
+              }
+            })
+
+            console.log(data);
+
+            var v = data.slice(0,10);
+            console.log(v);
 
             var svg = d3.select("body").append("svg")
                         .attr("width",3840)
                         .attr("height",2400);
             
             var circle1 = svg.selectAll("circle1")
-                            .data(data)
+                            .data(v)
                             .enter()
             
             circle1.append("image")
@@ -80,7 +93,7 @@
                     .text(function(d){return d.name});*/
             
             var circle1_text = svg.selectAll("circle1_text")
-                                    .data(data)
+                                    .data(v)
                                     .enter()
                                     .append("text")
                                     .text(function(d){
