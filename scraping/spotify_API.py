@@ -29,7 +29,7 @@ def getTrackIDs(playlist_ids):
                     track_ids.append(track['id'])
     return track_ids
 
-playlist_ids = ["37i9dQZEVXbNG2KDcFcKOF"]  # SpotifyのプレイリストのIDを入力
+playlist_ids = ["37i9dQZEVXbKqiTGXuCOsB"]  # SpotifyのプレイリストのIDを入力
 track_ids = getTrackIDs(playlist_ids)
 # print(len(track_ids))
 # print(track_ids)
@@ -68,17 +68,17 @@ for track_id in track_ids:
   track = getTrackFeatures(track_id)
   tracks.append(track)
 
-# csvファイルを作るなら下の部分を使う
-# df = pd.DataFrame(tracks, columns = ['name', 'album', 'artist', 'release_date', 'length', 'popularity', 'key', 'mode', 'danceability', 'acousticness', 'energy', 'instrumentalness', 'liveness', 'loudness', 'speechiness', 'tempo', 'time_signature', 'valence'])
-# df.head()
-# df.to_csv('Japan_BEST2021.csv', encoding='utf_8_sig')
+#csvファイルを作るなら下の部分を使う
+df = pd.DataFrame(tracks, columns = ['name', 'album', 'artist', 'image', 'release_date', 'length', 'popularity', 'key', 'mode', 'danceability', 'acousticness', 'energy', 'instrumentalness', 'liveness', 'loudness', 'speechiness', 'tempo', 'time_signature', 'valence'])
+df.head()
+df.to_csv('Japan_Top50.csv', encoding='utf_8_sig')
 
 
-#jsonファイルを作るなら下の部分を使う
-items = ['name', 'album', 'artist', 'image', 'release_date', 'length', 'popularity', 'key', 'mode', 'danceability', 'acousticness', 'energy', 'instrumentalness', 'liveness', 'loudness', 'speechiness', 'tempo', 'time_signature', 'valence']
-tracks_dict = {i+1: dict(zip(items,tracks[i])) for i in range(len(tracks))}
-# print(tracks_dict) これは試験用
+# #jsonファイルを作るなら下の部分を使う
+# items = ['name', 'album', 'artist', 'image', 'release_date', 'length', 'popularity', 'key', 'mode', 'danceability', 'acousticness', 'energy', 'instrumentalness', 'liveness', 'loudness', 'speechiness', 'tempo', 'time_signature', 'valence']
+# tracks_dict = {i+1: dict(zip(items,tracks[i])) for i in range(len(tracks))}
+# # print(tracks_dict) これは試験用
 
-#ファイルごとに名前を変える
-with open("Global_Top50.json","w") as f:
-    json.dump(tracks_dict,f,ensure_ascii=False, indent=4)
+# #ファイルごとに名前を変える
+# with open("Japan_BEST2021.json","w") as f:
+#     json.dump(tracks_dict,f,ensure_ascii=False, indent=4)

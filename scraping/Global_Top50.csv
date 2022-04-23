@@ -1,51 +1,51 @@
-﻿,name,album,artist,release_date,length,popularity,key,mode,danceability,acousticness,energy,instrumentalness,liveness,loudness,speechiness,tempo,time_signature,valence
-0,As It Was,As It Was,Harry Styles,2022-03-31,167303,100,6,0,0.52,0.342,0.731,0.00101,0.311,-5.338,0.0557,173.93,4,0.662
-1,First Class,First Class,Jack Harlow,2022-04-08,173947,93,8,1,0.905,0.0254,0.563,9.71e-06,0.113,-6.135,0.102,106.998,4,0.324
-2,Heat Waves,Dreamland (+ Bonus Levels),Glass Animals,2020-08-06,238805,93,11,1,0.761,0.44,0.525,6.7e-06,0.0921,-6.9,0.0944,80.87,4,0.531
-3,STAY (with Justin Bieber),F*CK LOVE 3: OVER YOU,The Kid LAROI,2021-07-23,141805,90,1,1,0.591,0.0383,0.764,0.0,0.103,-5.484,0.0483,169.928,4,0.478
-4,Enemy (with JID) - from the series Arcane League of Legends,Mercury - Act 1,Imagine Dragons,2021-09-03,173381,87,11,0,0.728,0.237,0.783,0.0,0.434,-4.424,0.266,77.011,4,0.555
-5,Envolver,Versions of Me,Anitta,2022-04-12,193805,67,4,0,0.812,0.152,0.736,0.00254,0.0914,-5.421,0.0833,91.993,4,0.396
-6,Bam Bam (feat. Ed Sheeran),Familia,Camila Cabello,2022-04-07,206070,74,8,1,0.756,0.182,0.697,0.0,0.333,-6.377,0.0401,94.996,4,0.956
-7,INDUSTRY BABY (feat. Jack Harlow),MONTERO,Lil Nas X,2021-09-17,212352,88,10,0,0.741,0.0221,0.691,0.0,0.0476,-7.395,0.0672,150.087,4,0.892
-8,Cold Heart - PNAU Remix,The Lockdown Sessions,Elton John,2021-10-22,202735,75,1,1,0.795,0.0354,0.8,7.25e-05,0.0915,-6.32,0.0309,116.032,4,0.934
-9,abcdefu,abcdefu,GAYLE,2021-08-13,168601,95,4,1,0.695,0.299,0.54,0.0,0.367,-5.692,0.0493,121.932,4,0.415
-10,Una Noche en Medellín,Una Noche en Medellín,Cris Mj,2022-01-21,153750,93,10,0,0.87,0.0924,0.548,4.6e-05,0.0534,-5.253,0.077,96.018,4,0.832
-11,MAMIII,MAMIII,Becky G,2022-02-10,226088,94,4,0,0.843,0.0934,0.7,0.0,0.14,-3.563,0.0803,93.991,4,0.899
-12,Ghost,Justice,Justin Bieber,2021-03-19,153190,91,2,1,0.601,0.185,0.741,2.91e-05,0.415,-5.569,0.0478,153.96,4,0.441
-13,MIDDLE OF THE NIGHT,MIDDLE OF THE NIGHT,Elley Duhé,2020-01-10,184447,93,4,0,0.41,0.0228,0.611,0.0,0.116,-8.271,0.0467,185.727,3,0.0899
-14,Desesperados,VICE VERSA,Rauw Alejandro,2021-12-10,224996,88,1,0,0.869,0.356,0.694,0.00125,0.0878,-3.35,0.0783,90.02,4,0.511
-15,Plan A,Plan A,Paulo Londra,2022-03-23,178202,92,0,1,0.583,0.0495,0.834,0.0,0.0658,-4.875,0.0444,173.935,4,0.557
-16,Woman,Planet Her,Doja Cat,2021-06-25,172626,93,5,0,0.824,0.0888,0.764,0.00294,0.117,-4.175,0.0854,107.998,4,0.881
-17,Shivers,=,Ed Sheeran,2021-10-29,207853,92,2,1,0.788,0.281,0.859,0.0,0.0424,-2.724,0.0856,141.02,4,0.822
-18,good 4 u,SOUR,Olivia Rodrigo,2021-05-21,178146,93,9,1,0.563,0.335,0.664,0.0,0.0849,-5.044,0.154,166.928,4,0.688
-19,Easy On Me,30,Adele,2021-11-19,224694,87,5,1,0.604,0.578,0.366,0.0,0.133,-7.519,0.0282,141.981,4,0.13
-20,THATS WHAT I WANT,MONTERO,Lil Nas X,2021-09-17,143901,93,1,0,0.737,0.00614,0.846,0.0,0.0486,-4.51,0.22,87.981,4,0.546
-21,Fuera del mercado,@dannocean,Danny Ocean,2022-02-17,159849,90,8,1,0.453,0.32,0.673,0.0,0.131,-5.649,0.144,92.06,4,0.266
-22,Where Are You Now,Where Are You Now,Lost Frequencies,2021-07-30,148197,93,6,0,0.671,0.515,0.636,0.000411,0.172,-8.117,0.103,120.966,4,0.262
-23,X ÚLTIMA VEZ,LEGENDADDY,Daddy Yankee,2022-03-25,192477,89,7,1,0.812,0.0789,0.855,0.000167,0.108,-3.725,0.0554,90.04,4,0.573
-24,Bad Habits,=,Ed Sheeran,2021-10-29,230746,93,11,0,0.807,0.0451,0.893,2.79e-05,0.366,-3.745,0.0347,126.011,4,0.537
-25,Pepas,La 167,Farruko,2021-10-01,287120,82,7,1,0.762,0.00776,0.766,6.98e-05,0.128,-3.955,0.0343,130.001,4,0.442
-26,The Motto,The Motto,Tiësto,2021-11-04,164818,92,7,0,0.754,0.0301,0.763,2.23e-05,0.0901,-4.627,0.0435,117.953,4,0.464
-27,My Universe,Music Of The Spheres,Coldplay,2021-10-15,226198,85,1,0,0.573,0.0114,0.711,0.0,0.328,-6.268,0.0406,105.006,4,0.47
-28,Boyfriend,Boyfriend,Dove Cameron,2022-02-11,153000,92,7,0,0.345,0.232,0.612,0.0,0.194,-6.543,0.0608,179.773,3,0.232
-29,Light Switch,Light Switch (Instrumental),Charlie Puth,2022-01-19,185680,81,6,1,0.69,0.105,0.626,0.000335,0.0881,-5.693,0.306,184.009,4,0.912
-30,Blinding Lights,After Hours,The Weeknd,2020-03-20,200040,91,1,1,0.514,0.00146,0.73,9.54e-05,0.0897,-5.934,0.0598,171.005,4,0.334
-31,When You're Gone,When You're Gone,Shawn Mendes,2022-03-31,172266,88,5,1,0.603,0.0248,0.691,0.0,0.583,-5.805,0.0372,147.148,4,0.577
-32,Another Love,Long Way Down,Tom Odell,2013-06-17,244360,56,4,0,0.442,0.717,0.538,2.95e-05,0.09,-8.55,0.0451,122.758,4,0.139
-33,Infinity,Feel Something,Jaymes Young,2017-06-23,237720,92,11,0,0.671,0.148,0.673,5.29e-05,0.304,-6.941,0.0444,121.963,4,0.494
-34,traitor,SOUR,Olivia Rodrigo,2021-05-21,229226,91,3,1,0.38,0.691,0.339,0.0,0.12,-7.885,0.0338,100.607,4,0.0849
-35,Sweater Weather,I Love You.,The Neighbourhood,2013-04-19,240400,91,10,1,0.612,0.0495,0.807,0.0177,0.101,-2.81,0.0336,124.053,4,0.398
-36,Lo Siento BB:/ (with Bad Bunny & Julieta Venegas),Lo Siento BB:/ (with Bad Bunny & Julieta Venegas),Tainy,2021-10-05,207301,91,4,0,0.639,0.0889,0.703,1.78e-06,0.0865,-6.33,0.0794,169.888,4,0.138
-37,In My Head,In My Head,Lil Tjay,2022-04-01,135264,87,1,1,0.684,0.159,0.545,0.0,0.102,-6.885,0.121,143.049,4,0.407
-38,Kiss Me More (feat. SZA),Planet Her,Doja Cat,2021-06-25,208666,86,8,1,0.764,0.259,0.705,8.92e-05,0.12,-3.463,0.0284,110.97,4,0.781
-39,Dandelions,Safe Haven,Ruth B.,2017-05-05,233720,91,1,1,0.609,0.0157,0.692,0.0,0.0864,-2.958,0.0259,116.959,3,0.454
-40,Watermelon Sugar,Fine Line,Harry Styles,2019-12-13,174000,89,0,1,0.548,0.122,0.816,0.0,0.335,-4.209,0.0465,95.39,4,0.557
-41,Need to Know,Planet Her,Doja Cat,2021-06-25,210560,90,1,1,0.664,0.304,0.609,0.0,0.0926,-6.509,0.0707,130.041,4,0.194
-42,drivers license,SOUR,Olivia Rodrigo,2021-05-21,242013,90,10,1,0.561,0.768,0.431,1.42e-05,0.106,-8.81,0.0578,143.875,4,0.137
-43,I Love You So,I Love You So,The Walters,2014-11-28,160239,92,10,1,0.575,0.583,0.648,0.0,0.115,-4.891,0.0358,75.977,4,0.466
-44,Yonaguni,Yonaguni,Bad Bunny,2021-06-04,206710,91,1,1,0.644,0.276,0.648,0.0,0.135,-4.601,0.118,179.951,4,0.44
-45,Wait a Minute!,ARDIPITHECUS,WILLOW,2015-01-11,196520,87,3,0,0.764,0.0371,0.705,1.94e-05,0.0943,-5.279,0.0278,101.003,4,0.672
-46,Levitating (feat. DaBaby),Future Nostalgia,Dua Lipa,2020-03-27,203064,87,6,0,0.702,0.00883,0.825,0.0,0.0674,-3.787,0.0601,102.977,4,0.915
-47,Jordan,Jordan,Ryan Castro,2021-04-30,176142,89,10,0,0.796,0.0575,0.68,0.000683,0.103,-5.555,0.37,179.923,4,0.71
-48,Happier Than Ever,Happier Than Ever,Billie Eilish,2021-07-30,298899,89,0,1,0.332,0.767,0.225,0.00349,0.128,-8.697,0.0348,81.055,3,0.297
-49,Save Your Tears,After Hours,The Weeknd,2020-03-20,215626,89,0,1,0.68,0.0212,0.826,1.24e-05,0.543,-5.487,0.0309,118.051,4,0.644
+﻿,name,album,artist,image,release_date,length,popularity,key,mode,danceability,acousticness,energy,instrumentalness,liveness,loudness,speechiness,tempo,time_signature,valence
+0,As It Was,As It Was,Harry Styles,https://i.scdn.co/image/ab67616d0000b273b46f74097655d7f353caab14,2022-03-31,167303,100,6,0,0.52,0.342,0.731,0.00101,0.311,-5.338,0.0557,173.93,4,0.662
+1,First Class,First Class,Jack Harlow,https://i.scdn.co/image/ab67616d0000b27321e34052888986183afcebfa,2022-04-08,173947,94,8,1,0.905,0.0254,0.563,9.71e-06,0.113,-6.135,0.102,106.998,4,0.324
+2,Heat Waves,Dreamland (+ Bonus Levels),Glass Animals,https://i.scdn.co/image/ab67616d0000b2739e495fb707973f3390850eea,2020-08-06,238805,91,11,1,0.761,0.44,0.525,6.7e-06,0.0921,-6.9,0.0944,80.87,4,0.531
+3,STAY (with Justin Bieber),F*CK LOVE 3: OVER YOU,The Kid LAROI,https://i.scdn.co/image/ab67616d0000b2738e6551a2944764bc8e33a960,2021-07-23,141805,89,1,1,0.591,0.0383,0.764,0.0,0.103,-5.484,0.0483,169.928,4,0.478
+4,Enemy (with JID) - from the series Arcane League of Legends,Mercury - Act 1,Imagine Dragons,https://i.scdn.co/image/ab67616d0000b273d9b35d1c4d15c9de88b754a7,2021-09-03,173381,85,11,0,0.728,0.237,0.783,0.0,0.434,-4.424,0.266,77.011,4,0.555
+5,Bam Bam (feat. Ed Sheeran),Familia,Camila Cabello,https://i.scdn.co/image/ab67616d0000b273370ed6a9ced20874385fb147,2022-04-07,206070,78,8,1,0.756,0.182,0.697,0.0,0.333,-6.377,0.0401,94.996,4,0.956
+6,Cold Heart - PNAU Remix,The Lockdown Sessions,Elton John,https://i.scdn.co/image/ab67616d0000b273eb842acacb3238b2bf3b8471,2021-10-22,202735,85,1,1,0.795,0.0354,0.8,7.25e-05,0.0915,-6.32,0.0309,116.032,4,0.934
+7,Envolver,Versions of Me,Anitta,https://i.scdn.co/image/ab67616d0000b27396e2642422ad16661e673fa2,2022-04-12,193805,74,4,0,0.812,0.152,0.736,0.00254,0.0914,-5.421,0.0833,91.993,4,0.396
+8,INDUSTRY BABY (feat. Jack Harlow),MONTERO,Lil Nas X,https://i.scdn.co/image/ab67616d0000b273be82673b5f79d9658ec0a9fd,2021-09-17,212352,87,10,0,0.741,0.0221,0.691,0.0,0.0476,-7.395,0.0672,150.087,4,0.892
+9,Una Noche en Medellín,Una Noche en Medellín,Cris Mj,https://i.scdn.co/image/ab67616d0000b273697ed12671078b5dee48f0ad,2022-01-21,153750,92,10,0,0.87,0.0924,0.548,4.6e-05,0.0534,-5.253,0.077,96.018,4,0.832
+10,abcdefu,abcdefu,GAYLE,https://i.scdn.co/image/ab67616d0000b2732842f743ebd32235bceb43d3,2021-08-13,168601,94,4,1,0.695,0.299,0.54,0.0,0.367,-5.692,0.0493,121.932,4,0.415
+11,Ghost,Justice,Justin Bieber,https://i.scdn.co/image/ab67616d0000b273e6f407c7f3a0ec98845e4431,2021-03-19,153190,90,2,1,0.601,0.185,0.741,2.91e-05,0.415,-5.569,0.0478,153.96,4,0.441
+12,MIDDLE OF THE NIGHT,MIDDLE OF THE NIGHT,Elley Duhé,https://i.scdn.co/image/ab67616d0000b27353a2e11c1bde700722fecd2e,2020-01-10,184447,92,4,0,0.41,0.0228,0.611,0.0,0.116,-8.271,0.0467,185.727,3,0.0899
+13,MAMIII,MAMIII,Becky G,https://i.scdn.co/image/ab67616d0000b27372babf690675fe969470e8ee,2022-02-10,226088,93,4,0,0.843,0.0934,0.7,0.0,0.14,-3.563,0.0803,93.991,4,0.899
+14,Woman,Planet Her,Doja Cat,https://i.scdn.co/image/ab67616d0000b2734df3245f26298a1579ecc321,2021-06-25,172626,92,5,0,0.824,0.0888,0.764,0.00294,0.117,-4.175,0.0854,107.998,4,0.881
+15,Shivers,=,Ed Sheeran,https://i.scdn.co/image/ab67616d0000b273ef24c3fdbf856340d55cfeb2,2021-10-29,207853,91,2,1,0.788,0.281,0.859,0.0,0.0424,-2.724,0.0856,141.02,4,0.822
+16,Desesperados,VICE VERSA,Rauw Alejandro,https://i.scdn.co/image/ab67616d0000b273d9525f27b0a9e25b1fa21230,2021-12-10,224996,87,1,0,0.869,0.356,0.694,0.00125,0.0878,-3.35,0.0783,90.02,4,0.511
+17,X ÚLTIMA VEZ,LEGENDADDY,Daddy Yankee,https://i.scdn.co/image/ab67616d0000b27342b84b2b0aa47bc162b29522,2022-03-25,192477,89,7,1,0.812,0.0789,0.855,0.000167,0.108,-3.725,0.0554,90.04,4,0.573
+18,Easy On Me,30,Adele,https://i.scdn.co/image/ab67616d0000b273c6b577e4c4a6d326354a89f7,2021-11-19,224694,85,5,1,0.604,0.578,0.366,0.0,0.133,-7.519,0.0282,141.981,4,0.13
+19,good 4 u,SOUR,Olivia Rodrigo,https://i.scdn.co/image/ab67616d0000b273a91c10fe9472d9bd89802e5a,2021-05-21,178146,91,9,1,0.563,0.335,0.664,0.0,0.0849,-5.044,0.154,166.928,4,0.688
+20,THATS WHAT I WANT,MONTERO,Lil Nas X,https://i.scdn.co/image/ab67616d0000b273be82673b5f79d9658ec0a9fd,2021-09-17,143901,92,1,0,0.737,0.00614,0.846,0.0,0.0486,-4.51,0.22,87.981,4,0.546
+21,Where Are You Now,Where Are You Now,Lost Frequencies,https://i.scdn.co/image/ab67616d0000b2738d7a7f1855b04104ba59c18b,2021-07-30,148197,91,6,0,0.671,0.515,0.636,0.000411,0.172,-8.117,0.103,120.966,4,0.262
+22,Fuera del mercado,@dannocean,Danny Ocean,https://i.scdn.co/image/ab67616d0000b273be462dd5903fb27996331b48,2022-02-17,159849,89,8,1,0.453,0.32,0.673,0.0,0.131,-5.649,0.144,92.06,4,0.266
+23,Bad Habits,=,Ed Sheeran,https://i.scdn.co/image/ab67616d0000b273ef24c3fdbf856340d55cfeb2,2021-10-29,230746,91,11,0,0.807,0.0451,0.893,2.79e-05,0.366,-3.745,0.0347,126.011,4,0.537
+24,Pepas,La 167,Farruko,https://i.scdn.co/image/ab67616d0000b273f1bd89fe6542ac73b8555f73,2021-10-01,287120,81,7,1,0.762,0.00776,0.766,6.98e-05,0.128,-3.955,0.0343,130.001,4,0.442
+25,The Motto,The Motto,Tiësto,https://i.scdn.co/image/ab67616d0000b2736b64f7a7e0e7af3d604ab41e,2021-11-04,164818,91,7,0,0.754,0.0301,0.763,2.23e-05,0.0901,-4.627,0.0435,117.953,4,0.464
+26,Plan A,Plan A,Paulo Londra,https://i.scdn.co/image/ab67616d0000b2737e1179e64539bedc938933ef,2022-03-23,178202,91,0,1,0.583,0.0495,0.834,0.0,0.0658,-4.875,0.0444,173.935,4,0.557
+27,Boyfriend,Boyfriend,Dove Cameron,https://i.scdn.co/image/ab67616d0000b2730397f50cb9dc5393db5d08bc,2022-02-11,153000,91,7,0,0.345,0.232,0.612,0.0,0.194,-6.543,0.0608,179.773,3,0.232
+28,Blinding Lights,After Hours,The Weeknd,https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36,2020-03-20,200040,90,1,1,0.514,0.00146,0.73,9.54e-05,0.0897,-5.934,0.0598,171.005,4,0.334
+29,Light Switch,Light Switch (Instrumental),Charlie Puth,https://i.scdn.co/image/ab67616d0000b273eea6313204bdb8cd3e6cbc9d,2022-01-19,185680,80,6,1,0.69,0.105,0.626,0.000335,0.0881,-5.693,0.306,184.009,4,0.912
+30,My Universe,Music Of The Spheres,Coldplay,https://i.scdn.co/image/ab67616d0000b273ec10f247b100da1ce0d80b6d,2021-10-15,226198,84,1,0,0.573,0.0114,0.711,0.0,0.328,-6.268,0.0406,105.006,4,0.47
+31,Watermelon Sugar,Fine Line,Harry Styles,https://i.scdn.co/image/ab67616d0000b27377fdcfda6535601aff081b6a,2019-12-13,174000,89,0,1,0.548,0.122,0.816,0.0,0.335,-4.209,0.0465,95.39,4,0.557
+32,Another Love,Long Way Down,Tom Odell,https://i.scdn.co/image/ab67616d0000b2731b51f809c31f0d98f67c0b7d,2013-06-17,244360,54,4,0,0.442,0.717,0.538,2.95e-05,0.09,-8.55,0.0451,122.758,4,0.139
+33,Sweater Weather,I Love You.,The Neighbourhood,https://i.scdn.co/image/ab67616d0000b2738265a736a1eb838ad5a0b921,2013-04-19,240400,89,10,1,0.612,0.0495,0.807,0.0177,0.101,-2.81,0.0336,124.053,4,0.398
+34,traitor,SOUR,Olivia Rodrigo,https://i.scdn.co/image/ab67616d0000b273a91c10fe9472d9bd89802e5a,2021-05-21,229226,90,3,1,0.38,0.691,0.339,0.0,0.12,-7.885,0.0338,100.607,4,0.0849
+35,Infinity,Feel Something,Jaymes Young,https://i.scdn.co/image/ab67616d0000b273a9897f65d1ead1be10a51e3f,2017-06-23,237720,91,11,0,0.671,0.148,0.673,5.29e-05,0.304,-6.941,0.0444,121.963,4,0.494
+36,Dandelions,Safe Haven,Ruth B.,https://i.scdn.co/image/ab67616d0000b27397e971f3e53475091dc8d707,2017-05-05,233720,89,1,1,0.609,0.0157,0.692,0.0,0.0864,-2.958,0.0259,116.959,3,0.454
+37,Wait a Minute!,ARDIPITHECUS,WILLOW,https://i.scdn.co/image/ab67616d0000b2736ee651e65c3766d80e7fcab7,2015-01-11,196520,87,3,0,0.764,0.0371,0.705,1.94e-05,0.0943,-5.279,0.0278,101.003,4,0.672
+38,Kiss Me More (feat. SZA),Planet Her,Doja Cat,https://i.scdn.co/image/ab67616d0000b2734df3245f26298a1579ecc321,2021-06-25,208666,85,8,1,0.764,0.259,0.705,8.92e-05,0.12,-3.463,0.0284,110.97,4,0.781
+39,Jordan,Jordan,Ryan Castro,https://i.scdn.co/image/ab67616d0000b273a60c2f9c4737c3319da3e5d4,2021-04-30,176142,88,10,0,0.796,0.0575,0.68,0.000683,0.103,-5.555,0.37,179.923,4,0.71
+40,When You're Gone,When You're Gone,Shawn Mendes,https://i.scdn.co/image/ab67616d0000b273dad0775943c1a826bfed3117,2022-03-31,172266,87,5,1,0.603,0.0248,0.691,0.0,0.583,-5.805,0.0372,147.148,4,0.577
+41,Lo Siento BB:/ (with Bad Bunny & Julieta Venegas),Lo Siento BB:/ (with Bad Bunny & Julieta Venegas),Tainy,https://i.scdn.co/image/ab67616d0000b273abe9c2b5f03653d6b87696e6,2021-10-05,207301,90,4,0,0.639,0.0889,0.703,1.78e-06,0.0865,-6.33,0.0794,169.888,4,0.138
+42,Need to Know,Planet Her,Doja Cat,https://i.scdn.co/image/ab67616d0000b2734df3245f26298a1579ecc321,2021-06-25,210560,89,1,1,0.664,0.304,0.609,0.0,0.0926,-6.509,0.0707,130.041,4,0.194
+43,I Love You So,I Love You So,The Walters,https://i.scdn.co/image/ab67616d0000b2739214ff0109a0e062f8a6cf0f,2014-11-28,160239,90,10,1,0.575,0.583,0.648,0.0,0.115,-4.891,0.0358,75.977,4,0.466
+44,drivers license,SOUR,Olivia Rodrigo,https://i.scdn.co/image/ab67616d0000b273a91c10fe9472d9bd89802e5a,2021-05-21,242013,89,10,1,0.561,0.768,0.431,1.42e-05,0.106,-8.81,0.0578,143.875,4,0.137
+45,Yonaguni,Yonaguni,Bad Bunny,https://i.scdn.co/image/ab67616d0000b27364afd6879102d03460bd3ad9,2021-06-04,206710,90,1,1,0.644,0.276,0.648,0.0,0.135,-4.601,0.118,179.951,4,0.44
+46,Levitating (feat. DaBaby),Future Nostalgia,Dua Lipa,https://i.scdn.co/image/ab67616d0000b273d4daf28d55fe4197ede848be,2020-03-27,203064,85,6,0,0.702,0.00883,0.825,0.0,0.0674,-3.787,0.0601,102.977,4,0.915
+47,In My Head,In My Head,Lil Tjay,https://i.scdn.co/image/ab67616d0000b2731e6a9d4ce04b67a455ed6b8c,2022-04-01,135264,87,1,1,0.684,0.159,0.545,0.0,0.102,-6.885,0.121,143.049,4,0.407
+48,Happier Than Ever,Happier Than Ever,Billie Eilish,https://i.scdn.co/image/ab67616d0000b2732a038d3bf875d23e4aeaa84e,2021-07-30,298899,88,0,1,0.332,0.767,0.225,0.00349,0.128,-8.697,0.0348,81.055,3,0.297
+49,Save Your Tears,After Hours,The Weeknd,https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36,2020-03-20,215626,88,0,1,0.68,0.0212,0.826,1.24e-05,0.543,-5.487,0.0309,118.051,4,0.644
