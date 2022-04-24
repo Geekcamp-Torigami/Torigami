@@ -70,6 +70,75 @@
           this.valence = decodeURIComponent(location.search.split("=")[10]);
         },
       }).mount("#app");
+
+      d3.csv("../scraping/Japan_Top50.csv").then(function (data){
+        var query = location.search;
+        var value = query.split("=")
+        var value1 = value[1].split("?")
+        var target_name = decodeURIComponent(value1[0])
+        var target
+
+        for (let i=0; i < 50; i++){
+          if (data[i].name == target_name) {
+            target = data[i]
+          }
+        }
+
+        var features = [target.energy,target.danceability,target.tempo,target.acousticness,target.valence,target.popularity]
+
+        var svg = d3
+        .select("body")
+        .append("svg")
+        .attr("width", 3840)
+        .attr("height", 2380);
+
+        var bar = svg.selectAll("rect")
+                      .data(features)
+                      .enter()
+                      .append("rect");
+        
+        bar.attr("x",function(d,i) {return i*600+400})
+            .attr("y",2000)
+            .attr("height",0)
+            .attr("width",200)
+            .transition().duration(1000)
+            .attr("y",function(d,i){
+              if (d < 1){
+                return 2000-d*1000
+              } else {
+                return 2000-d*10
+              }
+            })
+            .attr("height",function(d,i){
+              if (d < 1){
+                return d*1000
+              } else {
+                return d*10
+              }
+            })
+            .attr("width",200)
+          
+        let icons;
+        
+        d3.csv("./scraping/icon.csv").then(function (dat){
+          icons = dat;
+          console.log(icons)
+          
+          var images = svg.selectAll("icons")
+                          .data(icons)
+                          .enter()
+                          .append("image");
+          
+          images.attr("x",function(d,i) {return i*600+400})
+                .attr("y",2020)
+                .attr("height",200)
+                .attr("width",200)
+                .attr("xlink:href",function(d){
+                    //console.log(d.image);
+                    return d.image;
+                })
+        })
+      })
     </script>
   </body>
 </html>
