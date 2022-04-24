@@ -8,7 +8,25 @@
     <script type="text/javascript" src="./d3.js"></script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div class="song">
+        <image
+          :src="image"
+          v-on:mouseover="mouseOverAction"
+          v-on:mouseleave="mouseLeaveAction"
+        ></image>
+        <transition>
+          <div class="detail" v-if="show">
+            <div class="name">{{name}}</div>
+            <div class="artist">sung by {{artist}}</div>
+            <div class="album">{{album}}</div>
+          </div>
+        </transition>
+        <!-- <div class="detail">{{name}}</div>
+        <div class="detail">{{artist}}</div>
+        <div class="detail">{{album}}</div> -->
+      </div>
+    </div>
     <style scoped>
       body {
         background: linear-gradient(
@@ -31,6 +49,63 @@
             hsla(119, 96%, 49%, 1) 100%,
             hsla(119, 96%, 49%, 0) 70%
           );
+      }
+
+      .artist {
+        font-size: 40px;
+        margin-top: 40px;
+      }
+
+      .album {
+        font-size: 40px;
+        margin-top: 40px;
+      }
+
+      .song {
+        height: 100vh;
+        text-align: center;
+        margin-top: 300px;
+        font-size: 50px;
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        position: relative;
+      }
+      img {
+        border-radius: 50%;
+        width: 1000px;
+        height: 1000px;
+        /* margin-top: 50%; */
+        transition: 0.5s;
+      }
+      .detail {
+        margin-top: 150px;
+      }
+      img:hover {
+        filter: blur(10px);
+      }
+
+      .song .detail {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 70px;
+        color: white;
+      }
+
+      .v-enter-active {
+        transition: opacity 0.5s;
+        opacity: 0;
+      }
+      .v-enter-to,
+      .v-leave {
+        opacity: 1;
+      }
+      .v-leave-active {
+        transition: opacity 0.5s;
+      }
+      .v-leave-to {
+        opacity: 0;
       }
     </style>
 
@@ -55,19 +130,48 @@
             energy: "",
             tempo: "",
             valence: "",
+            show: false,
           };
         },
+        methods: {
+          mouseOverAction() {
+            this.show = true;
+          },
+          mouseLeaveAction() {
+            this.show = false;
+          },
+        },
         created: function () {
-          this.name = decodeURIComponent(location.search.split("=")[1]);
-          this.album = decodeURIComponent(location.search.split("=")[2]);
-          this.artist = decodeURIComponent(location.search.split("=")[3]);
-          this.image = decodeURIComponent(location.search.split("=")[4]);
-          this.popularity = decodeURIComponent(location.search.split("=")[5]);
-          this.danceability = decodeURIComponent(location.search.split("=")[6]);
-          this.acousticness = decodeURIComponent(location.search.split("=")[7]);
-          this.energy = decodeURIComponent(location.search.split("=")[8]);
-          this.tempo = decodeURIComponent(location.search.split("=")[9]);
-          this.valence = decodeURIComponent(location.search.split("=")[10]);
+          this.name = decodeURIComponent(
+            location.search.split("=")[1].split("?")[0]
+          );
+          this.album = decodeURIComponent(
+            location.search.split("=")[2].split("?")[0]
+          );
+          this.artist = decodeURIComponent(
+            location.search.split("=")[3].split("?")[0]
+          );
+          this.image = decodeURIComponent(
+            location.search.split("=")[4].split("?")[0]
+          );
+          this.popularity = decodeURIComponent(
+            location.search.split("=")[5].split("?")[0]
+          );
+          this.danceability = decodeURIComponent(
+            location.search.split("=")[6].split("?")[0]
+          );
+          this.acousticness = decodeURIComponent(
+            location.search.split("=")[7].split("?")[0]
+          );
+          this.energy = decodeURIComponent(
+            location.search.split("=")[8].split("?")[0]
+          );
+          this.tempo = decodeURIComponent(
+            location.search.split("=")[9].split("?")[0]
+          );
+          this.valence = decodeURIComponent(
+            location.search.split("=")[10].split("?")[0]
+          );
         },
       }).mount("#app");
     </script>
