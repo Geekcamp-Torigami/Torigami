@@ -16,7 +16,7 @@
       <a href="./Japan_top50_acousticness.html">acousticness </a>
       <a href="./Japan_top50_valence.html">valence </a>
       <a href="./Japan_top50_popularity.html">popularity </a>
-    </div>
+    </div>   
 
     <style scoped>
       body {
@@ -80,18 +80,35 @@
                                         .attr("width",100)
                     })
                     .on("click",function(d){
+                        icons.transition().duration(1000)
+                                                .style("opacity",0)
+                        svg.selectAll("circle2").transition().duration(1000)
+                                                .style("opacity",0)
                         if (d3.select(this).attr("id") == "acousticness"){
-                            window.location.href = "Japan_top50_acousticness.html";
+                            setTimeout(function(){
+                                window.location.href = "Japan_top50_acousticness.html"
+                            },1000);
+                            //window.location.href = "Japan_top50_acousticness.html"
                         } else if (d3.select(this).attr("id") == "danceability"){
-                            window.location.href = "Japan_top50_danceability.html";
+                            setTimeout(function(){
+                                window.location.href = "Japan_top50_danceability.html"
+                            },1000);
                         } else if (d3.select(this).attr("id") == "energy"){
-                            window.location.href = "Japan_top50_energy.html";
+                            setTimeout(function(){
+                                window.location.href = "Japan_top50_energy.html"
+                            },1000);
                         } else if (d3.select(this).attr("id") == "popularity"){
-                            window.location.href = "Japan_top50_popularity.html";
+                            setTimeout(function(){
+                                window.location.href = "Japan_top50_popularity.html"
+                            },1000);
                         } else if (d3.select(this).attr("id") == "valence"){
-                            window.location.href = "Japan_top50_valence.html";
+                            setTimeout(function(){
+                                window.location.href = "Japan_top50_valence.html"
+                            },1000);
                         } else {
-                            window.location.href = "Japan_top50_tempo.html";
+                            setTimeout(function(){
+                                window.location.href = "Japan_top50_tempo.html"
+                            },1000);
                         }
                     })
             
@@ -119,7 +136,7 @@
                 .append('use')
                 .attr('xlink:href', '#circle')
         
-          var images = svg
+          var spotify = svg
           .append("image")
           .attr("xlink:href", "Spotify_Icon_RGB_Green.png")
           .attr("width", 480)
