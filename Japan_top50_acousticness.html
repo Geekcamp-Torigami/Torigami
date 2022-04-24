@@ -55,17 +55,19 @@
         .select("body")
         .append("svg")
         .attr("width", 3840)
-        .attr("height", 2400);
-
+        .attr("height", 2380);
+      
       var circle1 = svg.selectAll("circle1").data(a).enter();
 
       circle1
         .append("image")
+        .attr("rx",500)
+        .attr("ry",500)
         .attr("x", function (d, i) {
-          return 1920;
+          return 1860;
         })
         .attr("y", function (d, i) {
-          return 1200;
+          return 1260;
         })
         .attr("width", function (d) {
           return 0
@@ -81,6 +83,8 @@
           return d.name
         })
         .on("mouseover", function (d) {
+          var target = d3.select(this).attr("id");
+          console.log(target);
           d3.select(this)
             .attr("width", function (d) {
               return d.popularity * 3;
@@ -88,15 +92,23 @@
             .attr("height", function (d) {
               return d.popularity * 3;
             });
+          circle1_text.attr("font-size",function(d){
+              if (target == d3.select(this).attr("id")){
+                  return 80
+              } else {
+                return 40
+              }
+          })      
         })
         .on("mouseout", function (d) {
-          d3.select(this)
-            .attr("width", function (d) {
-              return d.popularity * 2;
-            })
-            .attr("height", function (d) {
-              return d.popularity * 2;
-            });
+            d3.select(this)
+              .attr("width", function (d) {
+                return d.popularity * 2;
+              })
+              .attr("height", function (d) {
+                return d.popularity * 2;
+              });
+            circle1_text.attr("font-size",40)
         })
         .on("click",function(d){
           console.log(d3.select(this).attr("id"));
@@ -104,10 +116,10 @@
         })
         .transition().duration(1000)
         .attr("x", function (d, i) {
-          return 1920 + 800 * Math.cos((2 * Math.PI * i) / 10);
+          return 1860 + 800 * Math.cos((2 * Math.PI * i) / 10);
         })
         .attr("y", function (d, i) {
-          return 1200 + 800 * Math.sin((2 * Math.PI * i) / 10);
+          return 1260 + 800 * Math.sin((2 * Math.PI * i) / 10);
         })
         .attr("width", function (d) {
           return d.popularity * 2;
@@ -127,56 +139,33 @@
         .enter()
         .append("text")
         .text(function (d) {
+          return d.name + "/" + d.artist;
+        })
+        .attr("id",function(d){
           return d.name;
         })
+        /*.attr("x", 1860)
+        .attr("y", 1260)
+        .attr("font-size",0)
+        .transiton().duration(1000)*/
         .attr("x", function (d, i) {
-          return 1920 + 800 * Math.cos((2 * Math.PI * i) / 10);
+          return 1940 + 800 * Math.cos((2 * Math.PI * i) / 10);
         })
         .attr("y", function (d, i) {
           return 1200 + 800 * Math.sin((2 * Math.PI * i) / 10);
         })
-        .attr("font-size", 20);
+        .attr("fill","white")
+        .attr("font-size", 40)
+        .attr("text-anchor","middle")
+        .attr("font-family","fantasy")
 
-      data2 = [10];
-      /*var circle2 = svg.selectAll("circle2")
-                            .data(data2)
-                            .enter()
-                            .append("circle")
-                            .attr("cx",960)
-                            .attr("cy",600)
-                            .attr("r",250)
-                            .attr("fill","black")
-                            .attr("stroke","rgb(30,215,96)")
-                           
-            var defs = svg.append('defs');
-            var circles = defs
-                            .append('circle')
-                            .attr('id', 'circle')
-                            .attr('r', 250)
-                            .attr('cx', 960)
-                            .attr('cy',600);
-        
-            defs.append('clipPath')
-                .attr('id', 'clip')
-                .append('use')
-                .attr('xlink:href', '#circle')
-
-            var images = svg
-                .append('image')
-                .attr('xlink:href', 'Spotify_Icon_RGB_Green.png')
-                .attr('width', 960)
-                .attr('height', 600)
-                .attr('clip-path', 'url(#clip)')
-                .attr('x', 480)
-                .attr('y', 300)
-                .on("mouseover",function(){
-                    circle2.attr("fill","orange")
-                            .attr("stroke","rgb(30,215,96)")
-                })
-                .on("mouseout",function(){
-                    circle2.attr("fill","black")
-                            .attr("stroke","rgb(30,215,96)")
-                })*/
+      var center_acoustic = svg
+                                .append("image")
+                                .attr("x",1860)
+                                .attr("y",1260)
+                                .attr("height",200)
+                                .attr("width",200)
+                                .attr("xlink:href", "images/acousticness.png") 
     });
   </script>
 </html>
