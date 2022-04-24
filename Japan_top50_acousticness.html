@@ -59,6 +59,9 @@
 
       var circle1 = svg.selectAll("circle1").data(a).enter();
 
+      var image = d3.select("svg").selectAll("image");
+      image.style("border-radius", "50%");
+
       circle1
         .append("image")
         .attr("x", function (d, i) {
@@ -68,17 +71,44 @@
           return 1200;
         })
         .attr("width", function (d) {
-          return 0
+          return 0;
         })
         .attr("height", function (d) {
-          return 0
+          return 0;
         })
-        .style("opacity",0)
+        .style("opacity", 0)
         .attr("xlink:href", function (d, i) {
           return d.image;
         })
-        .attr("id", function(d){
-          return d.name
+        .attr("name", function (d) {
+          return d.name;
+        })
+        .attr("album", function (d) {
+          return d.album;
+        })
+        .attr("artist", function (d) {
+          return d.artist;
+        })
+        .attr("image", function (d) {
+          return d.image;
+        })
+        .attr("popularity", function (d) {
+          return d.popularity;
+        })
+        .attr("danceability", function (d) {
+          return d.danceability;
+        })
+        .attr("acousticness", function (d) {
+          return d.acousticness;
+        })
+        .attr("energy", function (d) {
+          return d.energy;
+        })
+        .attr("tempo", function (d) {
+          return d.tempo;
+        })
+        .attr("valence", function (d) {
+          return d.valence;
         })
         .on("mouseover", function (d) {
           d3.select(this)
@@ -98,11 +128,33 @@
               return d.popularity * 2;
             });
         })
-        .on("click",function(d){
+        .on("click", function (d) {
+          console.log(location.href);
           console.log(d3.select(this).attr("id"));
-          loaction.href = "./music.html?name=" + encodeURIComponent(d3.select(this).attr("id"));
+          location.href =
+            "./music.html?name=" +
+            encodeURIComponent(d3.select(this).attr("name")) +
+            "?album=" +
+            encodeURIComponent(d3.select(this).attr("album")) +
+            "?artist=" +
+            encodeURIComponent(d3.select(this).attr("artist")) +
+            "?image=" +
+            encodeURIComponent(d3.select(this).attr("image")) +
+            "?popularity=" +
+            encodeURIComponent(d3.select(this).attr("popularity")) +
+            "?danceability=" +
+            encodeURIComponent(d3.select(this).attr("danceability")) +
+            "?acousticness=" +
+            encodeURIComponent(d3.select(this).attr("acousticness")) +
+            "?energy=" +
+            encodeURIComponent(d3.select(this).attr("energy")) +
+            "?tempo=" +
+            encodeURIComponent(d3.select(this).attr("tempo")) +
+            "?valence=" +
+            encodeURIComponent(d3.select(this).attr("valence"));
         })
-        .transition().duration(1000)
+        .transition()
+        .duration(1000)
         .attr("x", function (d, i) {
           return 1920 + 800 * Math.cos((2 * Math.PI * i) / 10);
         })
@@ -115,7 +167,7 @@
         .attr("height", function (d) {
           return d.popularity * 2;
         })
-        .style("opacity",1)
+        .style("opacity", 1);
       /*.append("text")
                     .attr({"text-anchor":"bottom","fill":"green"})
                     .style({"font-size":14})
@@ -147,7 +199,7 @@
                             .attr("r",250)
                             .attr("fill","black")
                             .attr("stroke","rgb(30,215,96)")
-                           
+
             var defs = svg.append('defs');
             var circles = defs
                             .append('circle')
@@ -155,7 +207,7 @@
                             .attr('r', 250)
                             .attr('cx', 960)
                             .attr('cy',600);
-        
+
             defs.append('clipPath')
                 .attr('id', 'clip')
                 .append('use')
@@ -179,4 +231,9 @@
                 })*/
     });
   </script>
+  <!-- 
+  <style type="text/javascript">
+     var image=d3.select("svg").selectAll("image");
+    image.style("border-radius","50%")
+  </style> -->
 </html>

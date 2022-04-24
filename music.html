@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="./d3.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <style scoped>
+      body {
+        background: linear-gradient(
+            45deg,
+            hsla(352, 96%, 45%, 1) 0%,
+            hsla(352, 96%, 45%, 0) 70%
+          ),
+          linear-gradient(
+            135deg,
+            hsla(253, 95%, 42%, 1) 10%,
+            hsla(253, 95%, 42%, 0) 80%
+          ),
+          linear-gradient(
+            225deg,
+            hsla(179, 91%, 45%, 1) 10%,
+            hsla(179, 91%, 45%, 0) 80%
+          ),
+          linear-gradient(
+            315deg,
+            hsla(119, 96%, 49%, 1) 100%,
+            hsla(119, 96%, 49%, 0) 70%
+          );
+      }
+    </style>
+
+    <!-- <script>
+      d3.csv("../scraping/Japan_Top50.csv").then(function (data) {
+        console.log(data);
+      });
+    </script> -->
+
+    <script src="https://unpkg.com/vue@3.2.20"></script>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            name: "",
+            album: "",
+            artist: "",
+            image: "",
+            popularity: "",
+            danceability: "",
+            acousticness: "",
+            energy: "",
+            tempo: "",
+            valence: "",
+          };
+        },
+        created: function () {
+          this.name = decodeURIComponent(location.search.split("=")[1]);
+          this.album = decodeURIComponent(location.search.split("=")[2]);
+          this.artist = decodeURIComponent(location.search.split("=")[3]);
+          this.image = decodeURIComponent(location.search.split("=")[4]);
+          this.popularity = decodeURIComponent(location.search.split("=")[5]);
+          this.danceability = decodeURIComponent(location.search.split("=")[6]);
+          this.acousticness = decodeURIComponent(location.search.split("=")[7]);
+          this.energy = decodeURIComponent(location.search.split("=")[8]);
+          this.tempo = decodeURIComponent(location.search.split("=")[9]);
+          this.valence = decodeURIComponent(location.search.split("=")[10]);
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
