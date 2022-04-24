@@ -113,7 +113,7 @@
           return d.valence;
         })
         .on("mouseover", function (d) {
-          var target = d3.select(this).attr("id");
+          var target = d3.select(this).attr("name");
           console.log(target);
           d3.select(this)
             .attr("width", function (d) {
