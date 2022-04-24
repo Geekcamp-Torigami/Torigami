@@ -30,8 +30,7 @@
             hsla(119, 96%, 49%, 1) 100%,
             hsla(119, 96%, 49%, 0) 70%
           );
-        height: 100vh;
-        width: 100vw;
+       
       }
     </style>
 
@@ -45,13 +44,13 @@
           .select("body")
           .append("svg")
           .attr("width", 3840)
-          .attr("height", 2250);
+          .attr("height", 2600);
 
         var icons = svg.selectAll("icons").data(icon).enter().append("image");
 
         icons
-          .attr("x", 1860)
-          .attr("y", 1160)
+          .attr("x", 1920)
+          .attr("y", 1200)
           .attr("height", 0)
           .attr("width", 0)
           .attr("xlink:href", function (d) {
@@ -67,8 +66,8 @@
               d3.select(this)
                 .transition()
                 .duration(100)
-                .attr("height", 200)
-                .attr("width", 200);
+                .attr("height", 400)
+                .attr("width", 400);
             }
           })
           .on("mouseout", function (d) {
@@ -76,8 +75,8 @@
               d3.select(this)
                 .transition()
                 .duration(100)
-                .attr("height", 100)
-                .attr("width", 100);
+                .attr("height", 200)
+                .attr("width", 200);
             }
           })
           .on("click", function (d) {
@@ -143,9 +142,9 @@
           .data(data2)
           .enter()
           .append("circle")
-          .attr("cx", 1920)
-          .attr("cy", 1200)
-          .attr("r", 147)
+          .attr("cx", 2050)
+          .attr("cy", 1300)
+          .attr("r", 130)
           .attr("fill", "black");
 
         var defs = svg.append("defs");
@@ -153,8 +152,8 @@
           .append("circle")
           .attr("id", "circle")
           .attr("r", 200)
-          .attr("cx", 1920)
-          .attr("cy", 1200);
+          .attr("cx", 2020)
+          .attr("cy", 1260);
 
         defs
           .append("clipPath")
@@ -168,21 +167,21 @@
           .attr("width", 480)
           .attr("height", 300)
           .attr("clip-path", "url(#clip)")
-          .attr("x", 1680)
-          .attr("y", 1050)
+          .attr("x", 1810)
+          .attr("y", 1145)
           .on("click", function () {
             center_button = !center_button;
             if (center_button) {
               icons
                 .transition()
                 .attr("x", function (d, i) {
-                  return 1860 + 400 * Math.cos((2 * Math.PI * i) / 6);
+                  return 1920 + 800 * Math.cos((2 * Math.PI * i) / 6);
                 })
                 .attr("y", function (d, i) {
-                  return 1160 + 400 * Math.sin((2 * Math.PI * i) / 6);
+                  return 1200 + 800 * Math.sin((2 * Math.PI * i) / 6);
                 })
-                .attr("height", 100)
-                .attr("width", 100)
+                .attr("height", 200)
+                .attr("width", 200)
                 .attr("opacity", 1);
             } else {
               icons
