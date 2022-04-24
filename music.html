@@ -62,9 +62,9 @@
       }
 
       .song {
-        height: 100vh;
+        height: 100px;
         text-align: center;
-        margin-top: 300px;
+        margin-top: 50px;
         font-size: 50px;
         color: white;
         font-family: "Courier New", Courier, monospace;
@@ -78,7 +78,7 @@
         transition: 0.5s;
       }
       .detail {
-        margin-top: 150px;
+        margin-top: 500px;
       }
       img:hover {
         filter: blur(10px);
@@ -86,7 +86,7 @@
 
       .song .detail {
         position: absolute;
-        top: 15%;
+        top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 70px;
@@ -193,7 +193,7 @@
         var svg = d3
         .select("body")
         .append("svg")
-        .attr("width", 3840)
+        .attr("width", 6000)
         .attr("height", 2380);
 
         var bar = svg.selectAll("rect")
@@ -201,26 +201,26 @@
                       .enter()
                       .append("rect");
         
-        bar.attr("x",function(d,i) {return i*600+400})
+        bar.attr("x",function(d,i) {return i*300+1200})
             .attr("y",2000)
             .attr("height",0)
-            .attr("width",200)
+            .attr("width",100)
             .transition().duration(1000)
             .attr("y",function(d,i){
               if (d < 1){
                 return 2000-d*1000
               } else {
-                return 2000-d*10
+                return 2000-d*5
               }
             })
             .attr("height",function(d,i){
               if (d < 1){
                 return d*1000
               } else {
-                return d*10
+                return d*5
               }
             })
-            .attr("width",200)
+            .attr("width",100)
           
         let icons;
         
@@ -233,10 +233,10 @@
                           .enter()
                           .append("image");
           
-          images.attr("x",function(d,i) {return i*600+400})
+          images.attr("x",function(d,i) {return i*300+1200})
                 .attr("y",2020)
-                .attr("height",200)
-                .attr("width",200)
+                .attr("height",100)
+                .attr("width",100)
                 .attr("xlink:href",function(d){
                     //console.log(d.image);
                     return d.image;

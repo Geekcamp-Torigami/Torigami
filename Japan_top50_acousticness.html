@@ -38,6 +38,7 @@
     d3.csv("../scraping/Japan_Top50.csv").then(function (data) {
       console.log(data);
 
+      let tyou = false;
       data.sort(function (a, b) {
         if (a.acousticness > b.acousticness) {
           return -1;
@@ -171,7 +172,7 @@
           return 1860 + 800 * Math.cos((2 * Math.PI * i) / 10);
         })
         .attr("y", function (d, i) {
-          return 1260 + 800 * Math.sin((2 * Math.PI * i) / 10);
+          return 1150 + 800 * Math.sin((2 * Math.PI * i) / 10);
         })
         .attr("width", function (d) {
           return d.popularity * 2;
@@ -201,22 +202,53 @@
         .attr("font-size",0)
         .transiton().duration(1000)*/
         .attr("x", function (d, i) {
-          return 1940 + 800 * Math.cos((2 * Math.PI * i) / 10);
+          return 1950 + 800 * Math.cos((2 * Math.PI * i) / 10);
         })
         .attr("y", function (d, i) {
-          return 1200 + 800 * Math.sin((2 * Math.PI * i) / 10);
+          return 1100 + 800 * Math.sin((2 * Math.PI * i) / 10);
         })
         .attr("fill","white")
         .attr("font-size", 40)
         .attr("text-anchor","middle")
         .attr("font-family","fantasy")
 
-      var center_acoustic = svg
-                                .append("image")
+      var center_acoustic = svg.append("image")
                                 .attr("x",1860)
-                                .attr("y",1260)
+                                .attr("y",1150)
                                 .attr("height",200)
                                 .attr("width",200)
-                                .attr("xlink:href", "images/acousticness.png") 
+                                .attr("xlink:href", "images/acousticness.png")
+                                .on("mouseover", function (d) {
+                                  if (!tyou) {
+                                    d3.select(this)
+                                      .transition()
+                                      .duration(100)
+                                      .attr("height", 300)
+                                      .attr("width", 300);
+                                  }
+                                })
+                                .on("mouseout", function (d) {
+                                  if (!tyou) {
+                                    d3.select(this)
+                                      .transition()
+                                      .duration(100)
+                                      .attr("height", 200)
+                                      .attr("width", 200);
+                                  }
+                                })
+                                .on("click", function (d) {
+                                  tyou = !tyou;
+                                  circle1_text.transition().duration(1000).style("opacity", 0);
+                                  circle1.transition().duration(1000).style("opacity", 0);
+                                  center_acoustic
+                                    .transition()
+                                    .duration(1000)
+                                    .delay(1000)
+                                    .attr("x", 1920 + 800 * Math.cos((2 * Math.PI * 3) / 6))
+                                    .attr("y", 1200 + 800 * Math.sin((2 * Math.PI * 3) / 6))
+                                  setTimeout(function () {
+                                    window.location.href = "Japan_top50.html";
+                                  }, 2500);
+                                })
     });
   </script>
