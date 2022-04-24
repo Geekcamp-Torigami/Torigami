@@ -62,19 +62,23 @@
       circle1
         .append("image")
         .attr("x", function (d, i) {
-          return 1920 + 800 * Math.cos((2 * Math.PI * i) / 10);
+          return 1920;
         })
         .attr("y", function (d, i) {
-          return 1200 + 800 * Math.sin((2 * Math.PI * i) / 10);
+          return 1200;
         })
         .attr("width", function (d) {
-          return d.popularity * 2;
+          return 0
         })
         .attr("height", function (d) {
-          return d.popularity * 2;
+          return 0
         })
+        .style("opacity",0)
         .attr("xlink:href", function (d, i) {
           return d.image;
+        })
+        .attr("id", function(d){
+          return d.name
         })
         .on("mouseover", function (d) {
           d3.select(this)
@@ -93,7 +97,25 @@
             .attr("height", function (d) {
               return d.popularity * 2;
             });
-        });
+        })
+        .on("click",function(d){
+          console.log(d3.select(this).attr("id"));
+          loaction.href = "./music.html?name=" + encodeURIComponent(d3.select(this).attr("id"));
+        })
+        .transition().duration(1000)
+        .attr("x", function (d, i) {
+          return 1920 + 800 * Math.cos((2 * Math.PI * i) / 10);
+        })
+        .attr("y", function (d, i) {
+          return 1200 + 800 * Math.sin((2 * Math.PI * i) / 10);
+        })
+        .attr("width", function (d) {
+          return d.popularity * 2;
+        })
+        .attr("height", function (d) {
+          return d.popularity * 2;
+        })
+        .style("opacity",1)
       /*.append("text")
                     .attr({"text-anchor":"bottom","fill":"green"})
                     .style({"font-size":14})
